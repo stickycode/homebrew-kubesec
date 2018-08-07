@@ -4,7 +4,7 @@ class Kubesec < Formula
   url "https://github.com/shyiko/kubesec/archive/0.9.0.tar.gz"
   sha256 "d36a81093322fdaaa2041f94a4efb7be978cabd691e2b88372e66f13550b4093"
   head "https://github.com/shyiko/kubesec.git"
-  version 0.9.0
+  version "0.9.0"
   depends_on "go" => :build
 
   option "with-short-name", "link as ksec instead"
