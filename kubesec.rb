@@ -1,10 +1,10 @@
 class Kubesec < Formula
   desc "Secure Secret management for Kubernetes (with gpg, Google Cloud KMS and AWS KMS backends)"
   homepage "https://github.com/shyiko/kubesec"
-  url "https://github.com/shyiko/kubesec/archive/0.9.1.tar.gz"
-  sha256 "2e00e8b08e5b6b61c400d0b97b5c0ef3b5945adb31a8d4df6ec8f5c5091d7f5a"
+  url "https://github.com/shyiko/kubesec/archive/0.9.2.tar.gz"
+  sha256 "49c9a69fc7f4c3d9efba0cbc9110a76f8d3390c4333a97c26e8f868ed84b4078"
   head "https://github.com/shyiko/kubesec.git"
-  version "0.9.1"
+  version "0.9.2"
   depends_on "go" => :build
 
   option "with-short-name", "link as ksec instead"
