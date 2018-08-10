@@ -1,10 +1,10 @@
 class Kubesec < Formula
   desc "A tool for encrypting and decrypting k8s secrets with AWS KMS"
   homepage "https://github.com/shyiko/kubesec"
-  url "https://github.com/shyiko/kubesec/archive/0.9.0.tar.gz"
-  sha256 "d36a81093322fdaaa2041f94a4efb7be978cabd691e2b88372e66f13550b4093"
+  url "https://github.com/shyiko/kubesec/archive/0.9.1.tar.gz"
+  sha256 "2e00e8b08e5b6b61c400d0b97b5c0ef3b5945adb31a8d4df6ec8f5c5091d7f5a"
   head "https://github.com/shyiko/kubesec.git"
-  version "0.9.0"
+  version "0.9.1"
   depends_on "go" => :build
 
   option "with-short-name", "link as ksec instead"
