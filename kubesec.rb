@@ -1,10 +1,10 @@
 class Kubesec < Formula
   desc "Secure Secret management for Kubernetes (with gpg, Google Cloud KMS and AWS KMS backends)"
-  homepage "https://github.com/shyiko/kubesec"
-  url "https://github.com/shyiko/kubesec/archive/0.9.2.tar.gz"
-  sha256 "49c9a69fc7f4c3d9efba0cbc9110a76f8d3390c4333a97c26e8f868ed84b4078"
-  head "https://github.com/shyiko/kubesec.git"
-  version "0.9.2"
+  homepage "https://github.com/stickycode/kubesec"
+  url "https://github.com/stickycode/kubesec/archive/0.9.3.tar.gz"
+  sha256 "d73cd0202c7563cc1dfbc2ee0804f8d77e9380646c21f9fe3f9ed9e5eb82f67a"
+  head "https://github.com/stickycode/kubesec.git"
+  version "0.9.3"
   depends_on "go" => :build
 
   option "with-short-name", "link as ksec instead"
@@ -12,8 +12,8 @@ class Kubesec < Formula
   def install
     ENV["GOPATH"] = buildpath
     ENV["PATH"]  = "#{ENV["PATH"]}:#{ENV["GOPATH"]}/bin"
-    (buildpath/"src/github.com/shyiko/kubesec").install buildpath.children
-    cd "src/github.com/shyiko/kubesec" do
+    (buildpath/"src/github.com/stickycode/kubesec").install buildpath.children
+    cd "src/github.com/stickycode/kubesec" do
       system "make", "fetch"
       system "make", "build"
       bin.install "kubesec" => build.with?("short-name") ? "ksec" : "kubesec"
